@@ -14,5 +14,11 @@ function edit(e){
     input.setSelectionRange(text.length, text.length);
     
 }
+ input.addEventListener('blur', doIt)
+ function doIt(e){
+    let newDiv = document.createElement('div');
+    newDiv.innerHTML = input.value;
+    input.replaceWith(newDiv);
 
-console.log(content.value);
+ }
+
